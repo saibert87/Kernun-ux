@@ -1,0 +1,145 @@
+.modal-form{
+    position: fixed;
+    left: 0px;
+    top:0px;
+    width: 40%;
+    background-color: white;
+    overflow: scroll;
+    height: 100vh;
+    z-index: 999;
+    max-width: 400px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    display: none;
+    @extend %col-4;
+    button{
+        border: none;
+        background: none;
+        background-color: #e87525;
+        width: 100%;
+        padding: 15px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    .title{
+        width: 100%;
+        padding-bottom: 40px;
+        h4{
+            font-size: 18px;
+            color: #584a3d;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+        }
+        a.close{
+            color: #584a3d;
+            text-decoration: none;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 26px;
+        }
+    }
+    .tabs{
+        border-bottom: 1px solid #e87525;
+        margin-bottom: 30px;
+        //overflow: hidden;
+        a{
+            padding: 5px 15px 5px 15px;
+            color: #7a7a7a;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            &:hover{
+                color: #e87525;
+            }
+        }
+        a.active{
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-left: 1px solid #e87525;
+            border-top: 1px solid #e87525;
+            border-right: 1px solid #e87525;
+            position: relative;
+            bottom: -1px;
+            background-color: white;
+            display: inline-block;
+            color: #e87525;
+        }
+    }
+    .form{
+        .newRule{
+            padding: 15px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            font-size: 12px;
+            padding-left: 100px;
+            position: relative;
+            margin-bottom: 25px;
+            cursor: pointer;
+            strong{
+                display: block;
+                color: #e87525;
+                font-size: 14px;
+            }
+            i{
+                position: absolute;
+                font-size: 40px;
+                left: 30px;
+                top: calc(50% - 20px);
+                color: #e87525;
+            }
+            &.active,&:hover{
+                border: 1px solid #e87525;
+            }
+        }
+        .radio{
+            margin: 0px;
+            label{
+                display: block;
+                position: relative;
+                background: none;
+                display: block;
+                width: 100%;
+                border: 1px solid #dcdcdc;
+                padding: 15px;
+                left: 0px;
+                border-radius: 4px;
+                padding-left: 50px;
+                cursor: pointer;
+                i{
+                    font-size: 20px;
+                    position: absolute;
+                    left: 11px;
+                    top: 11px;
+                    &.icon-ok{
+                        color: #24d168;
+
+                    }
+                    &.icon-cross{
+                        color: #d53232;
+                    }
+                }
+            }
+            &.selected,&:hover{
+                label{
+                    border-color: #e87525;
+                    color: #e87525;
+                }
+
+            }
+
+        }
+    }
+}
+.open-modaler{
+    .modal-form{
+        display: block !important;
+        max-width: calc( (100% / 12 ) * 3.5);
+        flex: 0 calc( (100% / 12 ) * 3.5);
+    }
+}
